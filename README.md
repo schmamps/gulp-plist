@@ -4,8 +4,10 @@ gulp-plist is a [gulp](https://github.com/gulpjs/gulp) plugin modifies Mac OS Pl
 It can read/write both binary and plain xml plist format.
 
 ## Install
-```
+
+```sh
 $ npm install --save-dev gulp-plist
+...
 ```
 
 ## Usage
