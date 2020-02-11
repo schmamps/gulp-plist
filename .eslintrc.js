@@ -1,8 +1,11 @@
 module.exports = {
     "env": {
         "es6": true,
-        "node": true
-    },
+        "node": true,
+	},
+	"globals": {
+		"describe": true,
+	},
     "extends": "eslint:recommended",
     "rules": {
         "accessor-pairs": "error",
@@ -198,7 +201,7 @@ module.exports = {
         "nonblock-statement-body-position": "error",
         "object-curly-newline": "off",
         "object-curly-spacing": "error",
-        "object-property-newline": "error",
+        "object-property-newline": "off",
         "object-shorthand": "error",
         "one-var": "off",
         "one-var-declaration-per-line": "error",
@@ -206,7 +209,7 @@ module.exports = {
         "operator-linebreak": "error",
         "padded-blocks": "off",
         "padding-line-between-statements": "error",
-        "prefer-arrow-callback": "error",
+        "prefer-arrow-callback": "off",
         "prefer-const": "error",
         "prefer-destructuring": "off",
         "prefer-numeric-literals": "error",
@@ -231,7 +234,7 @@ module.exports = {
             "last"
         ],
         "sort-imports": "error",
-        "sort-keys": "error",
+        "sort-keys": "off",
         "sort-vars": "error",
         "space-before-blocks": "off",
         "space-before-function-paren": "off",
