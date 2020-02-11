@@ -1,8 +1,6 @@
 'use strict';
 
-const path = require('path');
-const fs = require('fs');
-const PluginError = require('gulp-util').PluginError;
+const PluginError = require('plugin-error')
 const through = require('through2');
 const merge = require('deepmerge');
 const plist = require('plist');
@@ -49,24 +47,24 @@ function editor(editor, options) {
 
     try {
       switch(file.contents.toString('ascii', 0, 6)) {
-	case 'bplist':
-	  json = bplistParser.parseBuffer(file.contents)[0];
-	  break;
-	case '<?xml ':
-	  json = plist.parse(file.contents.toString('utf8'));
-	  break;
-	default:
-	  throw 'Unknown plist format';
+    case 'bplist':
+      json = bplistParser.parseBuffer(file.contents)[0];
+      break;
+    case '<?xml ':
+      json = plist.parse(file.contents.toString('utf8'));
+      break;
+    default:
+      throw 'Unknown plist format';
       }
       json = _editor(json);
 
       let content;
       if (options.writeBinary) {
-	content = bplistCreator(json);
+    content = bplistCreator(json);
       } else {
-	content = plist.build(json);
+    content = plist.build(json);
       }
-      file.contents = new Buffer(content);
+      file.contents = Buffer.from(content);
     } catch(err) {
       this.emit('error', new PluginError(config.name, err));
       return callback();
