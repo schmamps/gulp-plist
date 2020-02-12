@@ -53,7 +53,10 @@ describe('Parse and building', function () {
         'Year Of Birth': 1965,
         'Date Of Graduation': new Date('2004-06-22T19:23:43Z'),
         'Pets Names': [],
-        'Picture': new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
+        'Picture': Buffer.from([
+            0x3c, 0x42, 0x81, 0xa5, 0x81,
+            0xa5, 0x99, 0x81, 0x42, 0x3c
+        ]),
         'City Of Birth': 'Springfield',
         'Name': 'John Doe',
         'Kids Names': ['John', 'Kyra']
@@ -75,7 +78,10 @@ describe('Parse and building', function () {
         'Year Of Birth': 1024,
         'Date Of Graduation': new Date('2004-06-22T19:23:43Z'),
         'Pets Names': [],
-        'Picture': new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
+        'Picture': Buffer.from([
+            0x3c, 0x42, 0x81, 0xa5, 0x81,
+            0xa5, 0x99, 0x81, 0x42, 0x3c
+        ]),
         'City Of Birth': 'Springfield',
         'Name': 'John Doe',
         'Kids Names': ['John', 'Kyra'],
