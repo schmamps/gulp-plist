@@ -7,14 +7,14 @@ It can read/write both binary and plain xml plist format.
 
 ```sh
 $ npm install --save-dev gulp-plist
-...
+(command output)
 ```
 
 ## Usage
 
 ```js
 const gulp = require('gulp');
-const peditor = require('gulp-plist');
+const peditor = require('gulp-plist3');
 
 gulp.task('default', function(){
   return gulp.src('src/Info.plist')

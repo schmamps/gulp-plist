@@ -1,6 +1,6 @@
 {
-  "name": "gulp-plist",
-  "version": "0.1.0",
+  "name": "gulp-plist3",
+  "version": "3.0.0",
   "description": "gulp plugin to manage Mac OS Plist",
   "main": "index.js",
   "scripts": {
@@ -20,15 +20,15 @@
     "apple"
   ],
   "author": {
-    "name": "Taegon Kim",
-    "email": "gonom9@gmail.com",
-    "url": "https://github.com/taggon"
+    "name": "Andrew Champion",
+    "email": "awchampion@gmail.com",
+    "url": "https://github.com/schmamps"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taggon/gulp-plist/issues"
+    "url": "https://github.com/schmamps/gulp-plist/issues"
   },
-  "homepage": "https://github.com/taggon/gulp-plist#readme",
+  "homepage": "https://github.com/schmamps/gulp-plist#readme",
   "devDependencies": {
     "mocha": "^7.0.1",
     "plugin-error": "^1.0.1",
