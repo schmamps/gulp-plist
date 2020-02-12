@@ -1,12 +1,12 @@
-# gulp-plist [![Build Status](https://travis-ci.org/taggon/gulp-plist.svg?branch=master)](https://travis-ci.org/taggon/gulp-plist)
+# gulp-plist3
 
-gulp-plist is a [gulp](https://github.com/gulpjs/gulp) plugin modifies Mac OS Plist (property list) files which are often used in OS X and iOS applications.
+gulp-plist3 is a [gulp](https://github.com/gulpjs/gulp) plugin modifies Mac OS Plist (property list) files which are often used in OS X and iOS applications.
 It can read/write both binary and plain xml plist format.
 
 ## Install
 
 ```sh
-$ npm install --save-dev gulp-plist
+$ npm install --save-dev gulp-plist3
 (command output)
 ```
 
@@ -29,7 +29,7 @@ Or, you can pass an editor function to the plugin:
 
 ```js
 const gulp = require('gulp');
-const peditor = require('gulp-plist');
+const peditor = require('gulp-plist3');
 
 gulp.task('default', function(){
   return gulp.src('src/Info.plist')
@@ -46,7 +46,7 @@ Currently only `writeBinary` option is supported. If you want to write binary pl
 
 ```js
 const gulp = require('gulp');
-const peditor = require('gulp-plist');
+const peditor = require('gulp-plist3');
 
 gulp.task('default', function(){
   return gulp.src('src/Info.plist')
