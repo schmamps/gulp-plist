@@ -8,6 +8,18 @@ const peditor = require('.');
 const Vinyl = require('vinyl');
 
 
+function readFile(filename) {
+  const filepath = path.join(__dirname, 'sample', filename);
+
+  return (
+    new Vinyl({
+      path: filepath,
+      // eslint-disable-next-line no-sync
+      contents: fs.readFileSync(filepath)
+    })
+  );
+}
+
 describe('Parse and building', function () {
   it('should modify plain text format', function (done) {
     var stream = peditor({
@@ -108,15 +120,3 @@ describe('Option: writeBinary', function () {
     });
   });
 });
-
-function readFile(filename) {
-  const filepath = path.join(__dirname, 'sample', filename);
-
-  return (
-    new Vinyl({
-      path: filepath,
-      // eslint-disable-next-line no-sync
-      contents: fs.readFileSync(filepath)
-    })
-  );
-}
