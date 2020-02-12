@@ -38,13 +38,13 @@ describe('Parse and building', function () {
     var stream = peditor({});
     stream.on('data', function (file) {
       const expected = {
-        "Year Of Birth": 1965,
-        "Date Of Graduation": new Date('2004-06-22T19:23:43Z'),
-        "Pets Names": [],
-        "Picture": new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
-        "City Of Birth": "Springfield",
-        "Name": "John Doe",
-        "Kids Names": ["John", "Kyra"]
+        'Year Of Birth': 1965,
+        'Date Of Graduation': new Date('2004-06-22T19:23:43Z'),
+        'Pets Names': [],
+        'Picture': new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
+        'City Of Birth': 'Springfield',
+        'Name': 'John Doe',
+        'Kids Names': ['John', 'Kyra']
       };
 
       assert.deepEqual(expected, plist.parse(file.contents.toString('utf-8')));
@@ -55,19 +55,19 @@ describe('Parse and building', function () {
 
   it('should modify binary format', function (done) {
     var stream = peditor({
-      "Year Of Birth": 1024,
-      "Appended": ["Hello", "world"]
+      'Year Of Birth': 1024,
+      'Appended': ['Hello', 'world']
     });
     stream.on('data', function (file) {
       const expected = {
-        "Year Of Birth": 1024,
-        "Date Of Graduation": new Date('2004-06-22T19:23:43Z'),
-        "Pets Names": [],
-        "Picture": new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
-        "City Of Birth": "Springfield",
-        "Name": "John Doe",
-        "Kids Names": ["John", "Kyra"],
-        "Appended": ["Hello", "world"]
+        'Year Of Birth': 1024,
+        'Date Of Graduation': new Date('2004-06-22T19:23:43Z'),
+        'Pets Names': [],
+        'Picture': new Buffer([0x3c, 0x42, 0x81, 0xa5, 0x81, 0xa5, 0x99, 0x81, 0x42, 0x3c]),
+        'City Of Birth': 'Springfield',
+        'Name': 'John Doe',
+        'Kids Names': ['John', 'Kyra'],
+        'Appended': ['Hello', 'world']
       };
 
       assert.deepEqual(expected, plist.parse(file.contents.toString('utf-8')));
