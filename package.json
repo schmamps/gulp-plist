@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/taggon/gulp-plist#readme",
   "devDependencies": {
-    "mocha": "^7.0.1",
+    "mocha": "^7.2.0",
     "plugin-error": "^1.0.1",
     "vinyl": "^2.2.0"
   },
